@@ -7,7 +7,7 @@ COPY ./install-composer.sh /
 ENV DEBIAN_FRONTEND noninteractive
 ENV PHP_VERSION 7.2
 # Add ppa, curl and syslogd
-RUN apt-get update && apt-get install -y software-properties-common curl wget inetutils-syslogd supervisor && \
+RUN apt-get update && apt-get install -y software-properties-common curl wget inetutils-syslogd supervisor git && \
     apt-add-repository ppa:nginx/stable -y && \
     LC_ALL=C.UTF-8 apt-add-repository ppa:ondrej/php -y && \
     apt-get update && apt-get install -y \
