@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 # Composer
 COPY ./install-composer.sh /
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y software-properties-common curl wget in
     php${PHP_VERSION}-json \
     php${PHP_VERSION}-mysql \
     php${PHP_VERSION}-gd \
-    php-gettext \
+    php${PHP_VERSION}-gettext \
     php-redis \
     php-memcached \
     php-mailparse \
